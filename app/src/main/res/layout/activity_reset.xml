@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResetActivity"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    android:id="@+id/parentLayout">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="Enter your registered email and we'll send you a link to get back into your account."
+        android:textSize="19sp" />
+
+    <EditText
+        android:id="@+id/etEmailText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:hint="Enter your registered email."
+        android:inputType="text"
+        android:layout_gravity="center"
+        android:background="@drawable/border"
+        android:padding="13dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSendLink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="Send Login Link"
+        android:textSize="16dp"
+        android:padding="15dp"
+        android:background="#5386BC"
+        android:textColor="@color/white"/>
+
+
+</LinearLayout>

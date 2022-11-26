@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Money Manager app</string>
+    <string name="email">E-mail Address</string>
+
+    <string name="password">Password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="or_sign_in_with">or sign in with</string>
+    <string name="todo">TODO</string>
+    <string name="facebook">facebook</string>
+    <string name="google">Google</string>
+    <string name="don_t_have_account_register">Don\'t have account? Register</string>
+    <string name="seamlessly_intuitively">seamlessly and intuitively</string>
+
+    <string name="open_drawer">Open Navigation Drawer</string>
+    <string name="close_drawer">Close Navigation Drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
