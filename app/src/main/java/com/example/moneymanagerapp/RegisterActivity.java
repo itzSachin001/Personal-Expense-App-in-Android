@@ -96,6 +96,8 @@ public class RegisterActivity extends AppCompatActivity {
 
                             FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
 
+
+                            assert user != null;
                             if(user.isEmailVerified()) {
 
                                 progressBar.dismiss();

@@ -24,6 +24,8 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.util.Objects;
+
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class SignOutFragment extends Fragment {
@@ -51,7 +53,7 @@ public class SignOutFragment extends Fragment {
         tvEmail= myView.findViewById(R.id.tvEmail);
         btnSignOut=myView.findViewById(R.id.btnSignOut);
 
-        sharedPreferences = getContext().getSharedPreferences("autoLogin", Context.MODE_PRIVATE);
+        sharedPreferences =requireContext().getSharedPreferences("autoLogin", Context.MODE_PRIVATE);
 
         gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
@@ -120,10 +122,18 @@ public class SignOutFragment extends Fragment {
 
         if(googleSignInAccount != null){
             final String username = googleSignInAccount.getDisplayName();
-            final String email = googleSignInAccount.getEmail().toUpperCase();
+            final String email = Objects.requireNonNull(googleSignInAccount.getEmail()).toUpperCase();
             final Uri photo = googleSignInAccount.getPhotoUrl();
 
             tvUsername.setText("Name: " + username);
+            tvEmail.setText("Email: " + email);
+            profileImage.setImageURI(photo);
+        }else if(user !=null){
+            final String username = user.getUid();
+            final String email =user.getEmail().toUpperCase();
+            final Uri photo = user.getPhotoUrl();
+
+            tvUsername.setText("User ID: " + username);
             tvEmail.setText("Email: " + email);
             profileImage.setImageURI(photo);
         }

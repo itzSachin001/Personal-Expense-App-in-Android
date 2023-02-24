@@ -83,6 +83,7 @@ public class DashboardFragment extends Fragment {
                 for(DataSnapshot ds:snapshot.getChildren()){
 
                     Data data=ds.getValue(Data.class);
+                    assert data != null;
                     incomeResult+=data.getAmount();
 
                     String incomeAmm=String.valueOf(incomeResult);
@@ -106,6 +107,7 @@ public class DashboardFragment extends Fragment {
                 for(DataSnapshot ds:snapshot.getChildren()){
 
                     Data data=ds.getValue(Data.class);
+                    assert data != null;
                     expenseResult+=data.getAmount();
 
                     String incomeAmm=String.valueOf(expenseResult);

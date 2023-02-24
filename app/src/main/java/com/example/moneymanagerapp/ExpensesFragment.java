@@ -100,6 +100,7 @@ public class ExpensesFragment extends Fragment {
                 for(DataSnapshot ds:snapshot.getChildren()){
 
                     Data data=ds.getValue(Data.class);
+                    assert data != null;
                     expenseAmount+=data.getAmount();
 
                     String expenseAmm=String.valueOf(expenseAmount);
